@@ -56,11 +56,14 @@ nav ul {
   display: flex;
   list-style-type: none;
   padding: 0.5em;
+  flex-direction: row;
+  flex-wrap: wrap;
+
 }
 nav li {
-  flex: 1 1 auto;
-  float: left ;
-  width: 33.3333%;
+  flex: 1 2 auto;
+  float: unset;
+  width: 100%;
   list-style-type: none;
 }
 nav a {
@@ -71,7 +74,7 @@ nav a {
   color: #201201;
   display: block;
   text-align: center;
-  /*text-decoration: none;*/
+  text-decoration: none;
   font-size: x-large;
 }
 nav a:hover {
@@ -242,6 +245,20 @@ nav ul li {
 .button {
   border: #c1502e;
   background-color: #587e76;
+}
+@media only screen and (min-width: 32em){
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0.5em;
+    flex-wrap: nowrap;
+  }
+  nav li {
+    flex: 1 1 auto;
+    float: left ;
+    width: 33.3333%;
+    list-style-type: none;
+  }
 }
 @media only screen and (min-width: 50.25em) {
   p {
@@ -422,6 +439,7 @@ nav ul li {
     font-size: 1.2em;
   }
 }
+
 @media only screen and (min-width: 120em) {
   p {
     font-size: 1.5 em;
